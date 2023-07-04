@@ -1,0 +1,124 @@
+/* ALL DESIGN */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* COVER DESIGN*/
+@keyframes cover {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100vw;
+    }
+}
+@keyframes cover-close {
+    0% {
+        top: -100vh;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.cover {
+    font-family: 'Helvetica';
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform-origin: left bottom;
+}
+.cover-open .cover {
+    animation: cover ease 1s forwards;
+}
+.cover-close #cover-0,
+.cover-close #cover-1 {
+    animation: cover-close ease 1s forwards;
+}
+
+#cover-1 {
+    z-index: 999998;
+    background-color: #167115;
+    animation-delay: 0.1s;
+}
+#cover-2 {
+    z-index: 999997;
+    background-color: #105e0e;
+    animation-delay: 0.2s;
+}
+#cover-3 {
+    z-index: 999996;
+    background-color: #177315;
+    animation-delay: 0.3s;
+}
+#cover-4 {
+    z-index: 999995;
+    background-color: #218d1f;
+    animation-delay: 0.4s;
+}
+#cover-5 {
+    z-index: 999994;
+    background-color: #2e982c;
+    animation-delay: 0.5s;
+}
+#cover-6 {
+    z-index: 999993;
+    background-color: #40c43d;
+    animation-delay: 0.6s;
+}
+#cover-7 {
+    z-index: 999992;
+    background-color: #5cc85a;
+    animation-delay: 0.7s;
+}
+#cover-8 {
+    z-index: 999991;
+    background-color: #64d462;
+    animation-delay: 0.8s;
+}
+
+/* MAINCONTENTS DESIGN */
+header {
+    width: 100vw;
+    height: 20em;
+    margin: 20px 0;
+    text-align: center;
+    font-family: 'KiwiMaru';
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+@font-face {
+    font-family: 'KiwiMaru';
+    src: url('../font/KiwiMaru-Regular.ttf');
+}
+
+main section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    height: 100vh;
+    align-items: center;
+}
+
+main section div img{
+    width: 20vw;
+}

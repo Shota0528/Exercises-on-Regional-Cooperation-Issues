@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'KiwiMaru';
+    src: url('../font/KiwiMaru-Regular.ttf')
+}
+
+header {
+    font-family: 'KiwiMaru';
+    position: fixed;
+    top: 0;
+}
+
+.nav-item {
+    cursor: pointer;
+    position: relative;
+    overflow-y: hidden;
+}
+.nav-item::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: rgb(32, 100, 23);
+    bottom: 0;
+    left: -100%;
+    transition: left 0.3s ease;
+}
+
+.nav-item:hover::after {
+    left: 0;
+    transition: left 0.3s ease;
+}
